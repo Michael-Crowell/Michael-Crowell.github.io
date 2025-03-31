@@ -202,6 +202,15 @@
   .image-grid img:hover {
     transform: scale(1.02);
   }
+
+  .caption {
+    margin-top: 5px;
+    margin-bottom: 25px;
+    font-size: 0.95rem;
+    color: #cccccc;
+    line-height: 1.5;
+    max-width: 900px;
+  }
 </style>
 </head>
 <body>
@@ -239,15 +248,24 @@
 </div>
 
 <h4>Spatial Frequency of Tornado-Favorable Environments (TTI)</h4>
+<p class="caption">This map uses the Totals Totals Index (TTI), which combines vertical temperature gradients and moisture content to highlight areas of potential thunderstorm development. Elevated values correlate with a higher likelihood of severe convective activity.</p>
         <img src="images/totals_4x5.jpg" alt="Tornado Environment SOM Output" style="max-width:100%; border: 1px solid #415b76; margin-bottom: 20px;">
 
         <h4>Surface Moisture (Dewpoint at 850mb)</h4>
+<p class="caption">This visualization represents near-surface atmospheric moisture using 850mb dewpoint data. High values signal regions with favorable thermodynamic support for storm initiation and development.</p>
         <img src="images/dewpoint_4x5.jpg" alt="Dewpoint SOM Output" style="max-width:100%; border: 1px solid #415b76; margin-bottom: 20px;">
 
         <h4>Jet Stream Heights (400mb Geopotential Height)</h4>
+<p class="caption">This SOM layer captures the mid-atmospheric structure at 400mb, focusing on the spatial influence of jet stream dynamics. Changes in geopotential height patterns are critical in identifying areas of enhanced upper-level support.</p>
         <img src="images/geopotential_400_4x5.jpg" alt="Geopotential Height SOM Output" style="max-width:100%; border: 1px solid #415b76; margin-bottom: 20px;">
 
         <h4>Standardized Multivariate SOM Classification</h4>
+<p class="caption">This map represents the result of a multivariate self-organizing map (SOM), trained using standardized inputs across multiple atmospheric variables. It visualizes unique clusters of atmospheric configurations commonly associated with tornado-favorable environments.</p>
+
+<p style="margin-top: 30px; font-style: italic;">About the Methodology:</p>
+<p class="caption">To discern complex atmospheric patterns across decades of data, I utilized <strong>Self-Organizing Maps (SOMs)</strong>, a type of artificial neural network that clusters high-dimensional input into a simplified two-dimensional grid. This unsupervised learning method excels at identifying nonlinear relationships and emergent patterns in synoptic climatology. My SOMs were trained using standardized inputs such as geopotential height, moisture, and thermodynamic indices, allowing me to identify recurring atmospheric configurations linked to severe weather.</p>
+<p class="caption">In tandem, I performed <strong>Principal Component Analysis (PCA)</strong> to reduce dimensionality and highlight the dominant modes of variability across the reanalysis dataset. PCA enabled the extraction of orthogonal atmospheric structures that provided a statistical foundation for understanding which variables contributed most to pattern clustering within the SOM framework.</p>
+<p class="caption">This dual-method approach draws on the framework laid out by Sheridan & Lee (2011), who detailed the application of SOMs in synoptic climatology. You can read the referenced paper <a href="https://sheridan.geog.kent.edu/pubs/2011-PIPG.pdf" target="_blank">here</a>.</p>
         <img src="images/SOM_5x4(3).jpg" alt="Multivariate SOM Cluster" style="max-width:100%; border: 1px solid #415b76; margin-bottom: 20px;">
       </div>
 
