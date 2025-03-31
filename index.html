@@ -5,66 +5,404 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Michael D. Crowell | GIS & Data Portfolio</title>
   <style>
-    /* [existing CSS remains unchanged] */
-  </style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #0e1a2b;
+      color: #dfe6f0;
+    }
+    header {
+      background: linear-gradient(90deg, #1e2e40, #253b52);
+      color: #ffffff;
+      padding: 30px 40px;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    }
+    nav {
+      background: #172437;
+      padding: 12px 40px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    }
+    nav a {
+      color: #a5c8ff;
+      text-decoration: none;
+      font-weight: bold;
+      letter-spacing: 0.5px;
+      padding: 6px 12px;
+      transition: color 0.3s, background 0.3s;
+    }
+    nav a:hover {
+      color: #ffffff;
+      background: #274e78;
+      border-radius: 4px;
+    }
+    .container {
+      padding: 40px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    h2 {
+      border-bottom: 2px solid #324d67;
+      padding-bottom: 10px;
+    }
+    .project {
+      margin-bottom: 40px;
+    }
+    .project img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #415b76;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.4);
+    }
+    .tools {
+      font-style: italic;
+      color: #98a9bc;
+      margin-top: 5px;
+    }
+    a {
+      color: #91bbff;
+    }
+    a:hover {
+      color: #ffffff;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #101f33;
+      color: #a9bedb;
+      font-size: 0.9em;
+    }
+  
+  .carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin: 20px 0;
+  }
+  .carousel-track {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 400%;
+  }
+  .carousel-track img {
+    width: 100%;
+    flex: 0 0 100%;
+    object-fit: contain;
+    border: 1px solid #415b76;
+  }
+  .carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255,255,255,0.3);
+    border: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1;
+  }
+  .carousel-button.prev {
+    left: 10px;
+  }
+  .carousel-button.next {
+    right: 10px;
+  }
+  .carousel-dots {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 5px;
+  }
+  .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+  }
+  .dot.active {
+    background: white;
+  }
+
+  .carousel {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    margin: 30px auto;
+    overflow: hidden;
+  }
+  .carousel-track {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 400%;
+  }
+  .carousel-track img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    flex: 0 0 100%;
+    border: 1px solid #415b76;
+  }
+  .carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255,255,255,0.3);
+    border: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1;
+  }
+  .carousel-button.prev {
+    left: 10px;
+  }
+  .carousel-button.next {
+    right: 10px;
+  }
+  .carousel-dots {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 5px;
+  }
+  .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+  }
+  .dot.active {
+    background: white;
+  }
+
+  .image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin: 20px 0;
+  }
+  .image-grid img {
+    width: 100%;
+    height: auto;
+    border: 1px solid #415b76;
+    transition: transform 0.2s ease;
+  }
+  .image-grid img:hover {
+    transform: scale(1.02);
+  }
+
+  .caption {
+    margin-top: 5px;
+    margin-bottom: 25px;
+    font-size: 0.95rem;
+    color: #cccccc;
+    line-height: 1.5;
+    max-width: 900px;
+  }
+
+  .thumb {
+    text-align: center;
+  }
+  .thumb-label {
+    font-size: 0.85rem;
+    color: #aebed1;
+    margin-top: 6px;
+    margin-bottom: 20px;
+  }
+</style>
 </head>
 <body>
-  <!-- [existing header and nav remain unchanged] -->
+  <header>
+    <h1>Michael D. Crowell</h1>
+    <p>Climate Scientist & Geospatial Analyst | Data-Driven Environmental Solutions</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#portfolio">Projects</a>
+    <a href="#resume">Resume</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
   <div class="container">
     <section id="about">
-      <!-- [existing about section remains unchanged] -->
+      <h2>About Me</h2>
+      <p>I’m a climate scientist and geospatial data analyst with experience across environmental, health, and academic sectors. I specialize in making complex data understandable and actionable — whether through mapping, visualization, or automated analysis workflows. My projects have ranged from modeling tornado-favorable environments to building public health dashboards, using tools like R, Python, ArcGIS Pro, and Tableau. I have experience transforming multi-million-cell datasets and multidimensional arrays in R into highly refined, targeted visualizations. Above all, I focus on turning data into tools that people can actually use.</p>
     </section>
 
     <section id="portfolio">
       <h2>Projects</h2>
-
-      <!-- [existing tornado project remains unchanged] -->
-
       <div class="project">
-        <h3>Public Health GIS & Environmental Surveillance (Portage County Health District)</h3>
-        <p>As a contracted GIS technician at the Portage County Health District (PCHD), I supported data-driven public health decision-making through mapping, spatial analysis, and dashboard development. My work integrated field data, environmental hazards, and chronic illness reporting into intuitive visuals for public and internal use.</p>
+        <h3>Identifying Categories of Tornado-Producing Environments and the Impacts of Climate Change</h3>
+        <p>This project investigates how climate change is shifting the synoptic and mesoscale environments that favor tornado formation. Drawing from 70 years of atmospheric data from ECMWF, NCEI, and NOAA, I applied principal component analysis (PCA) and self-organizing maps (SOMs) to identify, categorize, and track evolving clusters of tornado-favorable environments across the central and eastern U.S.</p>
+        <p>Using high-resolution reanalysis and GCM outputs from ERA5 and CMIP6, I analyzed multidimensional atmospheric variables such as geopotential height, dewpoint, and wind shear—transforming massive, multi-million-cell datasets in R and MATLAB. This analysis reveals a southeastward shift in tornado-supportive conditions, with new clusters emerging outside traditional Tornado Alley.</p>
+        <p>Presented at AGU and AAG, this research reflects the power of synoptic climatology to reveal meaningful patterns in an era of intensifying extreme weather.</p>
+        <div class="tools">Tools & Data: R, MATLAB, Self-Organizing Maps, Principal Component Analysis, ERA5, CMIP6, ECMWF, NCEI, NOAA</div>
+        <h4>Quick-View Map Gallery (Click to Enlarge)</h4>
+<p class="caption">Click any of the maps below to view it full-size in a new tab. These are quick visual previews of key atmospheric variables used in this research — full descriptions and interpretations follow below.</p>
+<div class="image-grid">
+  <div class="thumb">
+  <a href="images/totals_4x5.jpg" target="_blank"><img src="images/totals_4x5.jpg" alt="TTI Map"></a>
+  <p class="thumb-label">Totals Totals Index (TTI) — Unitless Index | Values ≥ 44 often indicate severe thunderstorm potential</p>
+</div>
+  <div class="thumb">
+  <a href="images/dewpoint_4x5.jpg" target="_blank"><img src="images/dewpoint_4x5.jpg" alt="Dewpoint Map"></a>
+  <p class="thumb-label">850mb Dewpoint — °C</p>
+</div>
+  <div class="thumb">
+  <a href="images/geopotential_400_4x5.jpg" target="_blank"><img src="images/geopotential_400_4x5.jpg" alt="Geopotential Height Map"></a>
+  <p class="thumb-label">400mb Geopotential Height — m</p>
+</div>
+  <div class="thumb">
+  <a href="images/SOM_5x4(3).jpg" target="_blank"><img src="images/SOM_5x4(3).jpg" alt="SOM Classification Map"></a>
+  <p class="thumb-label">Multivariate SOM Cluster — Standardized Units (σ)</p>
+</div>
+</div>
 
-        <h4>COVID-19 Case Tracking Dashboard</h4>
-        <img src="images/covid-dashboard.png" alt="COVID-19 Dashboard" />
-        <p class="caption">I maintained and expanded the COVID-19 surveillance dashboard, incorporating hospitalization trends, death counts, and zip-code-based case clusters using Tableau and ArcGIS Online. Interactive components allowed real-time queries and visual summaries for public awareness.</p>
+<h4>Spatial Frequency of Tornado-Favorable Environments (TTI)</h4>
+<p class="caption">This map uses the Totals Totals Index (TTI), which combines vertical temperature gradients and moisture content to highlight areas of potential thunderstorm development. Elevated values correlate with a higher likelihood of severe convective activity.</p>
+        <p class="thumb-label">Totals Totals Index (TTI) — Unitless Index | Values ≥ 44 often indicate severe thunderstorm potential</p>
+<img src="images/totals_4x5.jpg" alt="Tornado Environment SOM Output" style="max-width:100%; border: 1px solid #415b76; margin-bottom: 20px;">
 
-        <h4>Harmful Algal Bloom (HAB) Mapping</h4>
-        <img src="images/algal-bloom.png" alt="HAB Monitoring Map" />
-        <p class="caption">Created early versions of a HAB monitoring map using water sample collection sites and satellite-aided detection. The goal was to inform residents and state agencies of lake conditions and bloom severity in near real-time.</p>
+        <h4>Surface Moisture (Dewpoint at 850mb)</h4>
+<p class="caption">This visualization represents near-surface atmospheric moisture using 850mb dewpoint data. High values signal regions with favorable thermodynamic support for storm initiation and development.</p>
+        <p class="thumb-label">850mb Dewpoint — °C</p>
+<img src="images/dewpoint_4x5.jpg" alt="Dewpoint SOM Output" style="max-width:100%; border: 1px solid #415b76; margin-bottom: 20px;">
 
-        <h4>Food Establishment Risk & Inspection Maps</h4>
-        <img src="images/Food_data_Heat_MC.jpg" alt="Food Facility Density Map" />
-        <p class="caption">Used ArcGIS Pro to create heatmaps of food safety violations, aiding in field inspection planning. These maps highlighted risk clusters and frequency zones to optimize public health interventions.</p>
+        <h4>Jet Stream Heights (400mb Geopotential Height)</h4>
+<p class="caption">This SOM layer captures the mid-atmospheric structure at 400mb, focusing on the spatial influence of jet stream dynamics. Changes in geopotential height patterns are critical in identifying areas of enhanced upper-level support.</p>
+        <p class="thumb-label">400mb Geopotential Height — m</p>
+<img src="images/geopotential_400_4x5.jpg" alt="Geopotential Height SOM Output" style="max-width:100%; border: 1px solid #415b76; margin-bottom: 20px;">
 
-        <img src="images/Food_data_Risk_MC.jpg" alt="Risk Category Clustering Map" />
-        <p class="caption">Mapped risk categories (e.g., C1S, C3L) across Portage County using symbology and clustering, simplifying regulatory classification into an easily digestible format.</p>
+        <h4>Standardized Multivariate SOM Classification</h4>
+<p class="caption">This map layout is an output from a <strong>Self-Organizing Map (SOM)</strong>, a type of artificial neural network that clusters similar atmospheric conditions into spatial patterns. Each panel, or node, shows a recurring environment type — built by grouping days with similar atmospheric setups together.</p>
+<p class="caption">The SOM was trained on multivariable atmospheric data (such as instability indices, temperature gradients, and moisture fields) that had first been simplified using <strong>Principal Component Analysis (PCA)</strong>. These panels do not represent a time sequence — they are not arranged chronologically or directionally (e.g., left-to-right). Instead, each node is a spatial average of cases that belong to that specific pattern type.</p>
+<p class="caption">For example, if the data input was the Totals Totals Index (TTI), each panel would represent a typical spatial structure of thunderstorm potential. Areas shaded red would suggest higher instability or storm favorability, while blues would indicate lower values. However, this visualization method is flexible and can be applied to a range of variables beyond TTI.</p>
 
-        <img src="images/Food_data_MC.jpg" alt="Food Facility Types Map" />
-        <p class="caption">Icon-based visualization of retail food establishments, sorting them by type (e.g., FSO, RFE) to support licensing and zoning compliance operations.</p>
-
-        <h4>Geocoding & Spatial Data Enhancement</h4>
-        <p class="caption">I geocoded thousands of address-based inspection records, converting tabular datasets into point-based spatial layers using R and ArcGIS Pro. This enabled the creation of all maps above — transforming raw address lists into actionable health intelligence.</p>
-
-        <div class="tools">Tools: ArcGIS Pro, ArcGIS Online, R, Tableau, Geocoding APIs</div>
+<p style="margin-top: 30px; font-style: italic;">About the Methodology:</p>
+<p class="caption">To identify subtle and recurring patterns in tornado-supportive environments, I used <strong>Self-Organizing Maps (SOMs)</strong>, which are a form of artificial neural network. SOMs are especially useful for making sense of large, multidimensional atmospheric datasets, as they can cluster similar conditions and visualize them in an intuitive, spatial way. By standardizing the inputs — such as temperature profiles, dewpoint, and wind shear — I was able to train the network to recognize distinct atmospheric patterns that often precede tornado formation.</p>
+<p class="caption">I also applied <strong>Principal Component Analysis (PCA)</strong> to simplify the dataset and isolate dominant climate signals, making it easier to interpret how different variables contribute to severe weather potential. Together, SOMs and PCA helped uncover how these environments are shifting over time, both in location and structure, as the climate continues to change.</p>
+<p class="caption">This approach is inspired by work from Sheridan & Lee (2011), who demonstrated how SOMs can be used effectively in synoptic climatology. Their paper is available <a href="https://sheridan.geog.kent.edu/pubs/2011-PIPG.pdf" target="_blank">here</a>.</p>
+        <p class="thumb-label">Multivariate SOM Cluster — Standardized Units (σ)</p>
+<img src="images/SOM_5x4(3).jpg" alt="Multivariate SOM Cluster" style="max-width:100%; border: 1px solid #415b76; margin-bottom: 20px;">
       </div>
 
-      <!-- [other remaining projects (like tornado modeling) stay unchanged] -->
+      <div class="project">
+        <h3>Harmful Algal Bloom Monitoring Dashboard</h3>
+        <img src="images/algal-bloom.png" alt="Algal Bloom Dashboard">
+        <p>Developed for the Portage County Health District to visualize harmful algal bloom events using ArcGIS Dashboards and Python pipelines. Resulted in improved public awareness and state-level alerts.</p>
+        <div class="tools">Tools: ArcGIS Online, Python, ArcGIS Pro</div>
+      </div>
 
+      <div class="project">
+        <h3>COVID-19 & Chronic Disease Surveillance</h3>
+        <img src="images/covid-dashboard.png" alt="COVID Dashboard">
+        <p>Interactive dashboards to monitor COVID-19 cases and comorbidities across regional facilities. Merged GIS field data, chronic illness statistics, and regression analysis in RStudio.</p>
+        <div class="tools">Tools: RStudio, ArcGIS Pro, Tableau</div>
+      </div>
+
+      <div class="project">
+        <h3>Climate Modeling & Tornado Risk Analysis</h3>
+        <img src="images/tornado-modeling.png" alt="Tornado Risk Map">
+        <p>Used PCA, SOMs, and machine learning in R to identify high-risk tornadogenesis environments under future climate scenarios. Based on CMIP, ERA5, and NCEI datasets.</p>
+        <div class="tools">Tools: R, MATLAB, QGIS</div>
+      </div>
     </section>
 
     <section id="resume">
-      <!-- [unchanged] -->
+      <h2>Resume</h2>
+      <p><a href="Resume_Michael_Crowell_General_2Page.pdf" target="_blank">Download PDF Resume</a></p>
     </section>
+
     <section id="contact">
-      <!-- [unchanged] -->
+      <h2>Contact</h2>
+      <p>Email: mcrowel3@kent.edu</p>
+      <p>LinkedIn: <a href="https://linkedin.com/in/michaelcrowellgeo" target="_blank">linkedin.com/in/michaelcrowellgeo</a></p>
     </section>
   </div>
 
   <footer>
     <p>&copy; 2025 Michael D. Crowell</p>
   </footer>
+<script>
+  const track = document.querySelector('.carousel-track');
+  const slides = Array.from(track.children);
+  const nextButton = document.querySelector('.carousel-button.next');
+  const prevButton = document.querySelector('.carousel-button.prev');
+  const dotsNav = document.querySelector('.carousel-dots');
+  const dots = Array.from(dotsNav.children);
+  let currentSlide = 0;
 
-  <!-- [scripts remain unchanged] -->
+  function updateCarousel(position) {
+    track.style.transform = 'translateX(-' + (position * 100) + '%)';
+    dots.forEach(dot => dot.classList.remove('active'));
+    dots[position].classList.add('active');
+  }
+
+  nextButton.addEventListener('click', () => {
+    currentSlide = (currentSlide + 1) % slides.length;
+    updateCarousel(currentSlide);
+  });
+
+  prevButton.addEventListener('click', () => {
+    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+    updateCarousel(currentSlide);
+  });
+
+  dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+      currentSlide = index;
+      updateCarousel(currentSlide);
+    });
+  });
+
+  updateCarousel(currentSlide);
+</script>
+<script>
+  const track = document.querySelector('.carousel-track');
+  const slides = Array.from(track.children);
+  const nextButton = document.querySelector('.carousel-button.next');
+  const prevButton = document.querySelector('.carousel-button.prev');
+  const dotsNav = document.querySelector('.carousel-dots');
+  const dots = Array.from(dotsNav.children);
+  let currentSlide = 0;
+
+  function updateCarousel(position) {
+    track.style.transform = 'translateX(-' + (position * 100) + '%)';
+    dots.forEach(dot => dot.classList.remove('active'));
+    dots[position].classList.add('active');
+  }
+
+  nextButton.addEventListener('click', () => {
+    currentSlide = (currentSlide + 1) % slides.length;
+    updateCarousel(currentSlide);
+  });
+
+  prevButton.addEventListener('click', () => {
+    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+    updateCarousel(currentSlide);
+  });
+
+  dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+      currentSlide = index;
+      updateCarousel(currentSlide);
+    });
+  });
+
+  updateCarousel(currentSlide);
+</script>
 </body>
 </html>
