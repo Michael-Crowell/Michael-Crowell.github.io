@@ -273,15 +273,18 @@
 
 <h4>Spatial Frequency of Tornado-Favorable Environments (TTI)</h4>
 <p class="caption">This map uses the Totals Totals Index (TTI), which combines vertical temperature gradients and moisture content to highlight areas of potential thunderstorm development. Elevated values correlate with a higher likelihood of severe convective activity.</p>
-        <img src="images/totals_4x5.jpg" alt="Tornado Environment SOM Output" style="max-width:100%; border: 1px solid #415b76; margin-bottom: 20px;">
+        <p class="thumb-label">Totals Totals Index (TTI) — Unitless Index | Values ≥ 44 often indicate severe thunderstorm potential</p>
+<img src="images/totals_4x5.jpg" alt="Tornado Environment SOM Output" style="max-width:100%; border: 1px solid #415b76; margin-bottom: 20px;">
 
         <h4>Surface Moisture (Dewpoint at 850mb)</h4>
 <p class="caption">This visualization represents near-surface atmospheric moisture using 850mb dewpoint data. High values signal regions with favorable thermodynamic support for storm initiation and development.</p>
-        <img src="images/dewpoint_4x5.jpg" alt="Dewpoint SOM Output" style="max-width:100%; border: 1px solid #415b76; margin-bottom: 20px;">
+        <p class="thumb-label">850mb Dewpoint — °C</p>
+<img src="images/dewpoint_4x5.jpg" alt="Dewpoint SOM Output" style="max-width:100%; border: 1px solid #415b76; margin-bottom: 20px;">
 
         <h4>Jet Stream Heights (400mb Geopotential Height)</h4>
 <p class="caption">This SOM layer captures the mid-atmospheric structure at 400mb, focusing on the spatial influence of jet stream dynamics. Changes in geopotential height patterns are critical in identifying areas of enhanced upper-level support.</p>
-        <img src="images/geopotential_400_4x5.jpg" alt="Geopotential Height SOM Output" style="max-width:100%; border: 1px solid #415b76; margin-bottom: 20px;">
+        <p class="thumb-label">400mb Geopotential Height — m</p>
+<img src="images/geopotential_400_4x5.jpg" alt="Geopotential Height SOM Output" style="max-width:100%; border: 1px solid #415b76; margin-bottom: 20px;">
 
         <h4>Standardized Multivariate SOM Classification</h4>
 <p class="caption">This map layout is an output from a <strong>Self-Organizing Map (SOM)</strong>, a type of artificial neural network that clusters similar atmospheric conditions into spatial patterns. Each panel, or node, shows a recurring environment type — built by grouping days with similar atmospheric setups together.</p>
@@ -292,7 +295,8 @@
 <p class="caption">To identify subtle and recurring patterns in tornado-supportive environments, I used <strong>Self-Organizing Maps (SOMs)</strong>, which are a form of artificial neural network. SOMs are especially useful for making sense of large, multidimensional atmospheric datasets, as they can cluster similar conditions and visualize them in an intuitive, spatial way. By standardizing the inputs — such as temperature profiles, dewpoint, and wind shear — I was able to train the network to recognize distinct atmospheric patterns that often precede tornado formation.</p>
 <p class="caption">I also applied <strong>Principal Component Analysis (PCA)</strong> to simplify the dataset and isolate dominant climate signals, making it easier to interpret how different variables contribute to severe weather potential. Together, SOMs and PCA helped uncover how these environments are shifting over time, both in location and structure, as the climate continues to change.</p>
 <p class="caption">This approach is inspired by work from Sheridan & Lee (2011), who demonstrated how SOMs can be used effectively in synoptic climatology. Their paper is available <a href="https://sheridan.geog.kent.edu/pubs/2011-PIPG.pdf" target="_blank">here</a>.</p>
-        <img src="images/SOM_5x4(3).jpg" alt="Multivariate SOM Cluster" style="max-width:100%; border: 1px solid #415b76; margin-bottom: 20px;">
+        <p class="thumb-label">Multivariate SOM Cluster — Standardized Units (σ)</p>
+<img src="images/SOM_5x4(3).jpg" alt="Multivariate SOM Cluster" style="max-width:100%; border: 1px solid #415b76; margin-bottom: 20px;">
       </div>
 
       <div class="project">
