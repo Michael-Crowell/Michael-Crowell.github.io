@@ -186,6 +186,22 @@
   .dot.active {
     background: white;
   }
+
+  .image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin: 20px 0;
+  }
+  .image-grid img {
+    width: 100%;
+    height: auto;
+    border: 1px solid #415b76;
+    transition: transform 0.2s ease;
+  }
+  .image-grid img:hover {
+    transform: scale(1.02);
+  }
 </style>
 </head>
 <body>
@@ -215,21 +231,11 @@
         <p>Using high-resolution reanalysis and GCM outputs from ERA5 and CMIP6, I analyzed multidimensional atmospheric variables such as geopotential height, dewpoint, and wind shear—transforming massive, multi-million-cell datasets in R and MATLAB. This analysis reveals a southeastward shift in tornado-supportive conditions, with new clusters emerging outside traditional Tornado Alley.</p>
         <p>Presented at AGU and AAG, this research reflects the power of synoptic climatology to reveal meaningful patterns in an era of intensifying extreme weather.</p>
         <div class="tools">Tools & Data: R, MATLAB, Self-Organizing Maps, Principal Component Analysis, ERA5, CMIP6, ECMWF, NCEI, NOAA</div>
-        <div class="carousel">
-  <div class="carousel-track">
-    <img src="images/totals_4x5.jpg" alt="TTI Map">
-    <img src="images/dewpoint_4x5.jpg" alt="Dewpoint Map">
-    <img src="images/geopotential_400_4x5.jpg" alt="Geopotential Height Map">
-    <img src="images/SOM_5x4(3).jpg" alt="SOM Classification Map">
-  </div>
-  <button class="carousel-button prev">&#10094;</button>
-  <button class="carousel-button next">&#10095;</button>
-  <div class="carousel-dots">
-    <span class="dot"></span>
-    <span class="dot"></span>
-    <span class="dot"></span>
-    <span class="dot"></span>
-  </div>
+        <div class="image-grid">
+  <a href="images/totals_4x5.jpg" target="_blank"><img src="images/totals_4x5.jpg" alt="TTI Map"></a>
+  <a href="images/dewpoint_4x5.jpg" target="_blank"><img src="images/dewpoint_4x5.jpg" alt="Dewpoint Map"></a>
+  <a href="images/geopotential_400_4x5.jpg" target="_blank"><img src="images/geopotential_400_4x5.jpg" alt="Geopotential Height Map"></a>
+  <a href="images/SOM_5x4(3).jpg" target="_blank"><img src="images/SOM_5x4(3).jpg" alt="SOM Classification Map"></a>
 </div>
 
 <h4>Spatial Frequency of Tornado-Favorable Environments (TTI)</h4>
