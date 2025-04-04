@@ -320,68 +320,89 @@
       </div>
 
 
-   <div class="project">
-  <h3>Geospatial Public Health Applications at Portage County Health District</h3>
-  <p>From January 2024 to March 2025, I served as the principal GIS and data specialist at the Portage County Health District (PCHD). As the department’s lead analyst, I built data products that guided public health strategy, supported environmental field inspections, tracked communicable disease trends, and informed outreach and compliance decisions across agencies.</p>
-  <p>I applied geospatial analytics using <strong>ArcGIS Pro</strong>, <strong>ArcGIS Online</strong>, <strong>RStudio</strong>, <strong>Python</strong>, and <strong>Excel</strong>, regularly conducting geocoding, statistical modeling, bootstrapping, sampling, and spatial visualization. My work drew on data from the U.S. Census, Ohio EPA, ODNR, CDC, and internal inspection and disease surveillance logs.</p>
+  <div class="project">
+  <h3>GIS & Data Science at Portage County Health District</h3>
+  <p>From January 2024 to March 2025, I served as the full-time contracted GIS Technician at the Portage County Health District (PCHD) — though the scope of my work aligned more with that of a Geospatial Data Analyst. As the department's principal data lead, I supported cross-divisional projects that shaped public health strategy, compliance, and outreach. My responsibilities ranged from geocoding and data wrangling to statistical modeling, dashboard development, and map creation. These efforts directly informed decisions by public health managers, environmental health field teams, city councils, and the Health Commissioner herself.</p>
 
-  <h4>StoryMap Highlights – Community Health Improvement Plan</h4>
-  <p>The following featured maps were created for Portage County’s official 2023–2025 Community Health Improvement Plan. Each map integrates spatial analysis and demographic context to guide interventions and policy discussions. For the full interactive StoryMap, see the link below.</p>
+  <p>I routinely used <strong>ArcGIS Pro</strong>, <strong>ArcGIS Online</strong>, <strong>RStudio</strong>, <strong>Python</strong>, and <strong>Excel</strong> to manage and analyze complex datasets — including bootstrapping, sampling, modeling, and automating weekly updates. I worked with diverse data sources, including the U.S. Census, Ohio EPA, ODNR, local water system data, CDC, and state health records. My contributions included cleaning, transforming, de-identifying, and visualizing datasets into accessible dashboards and maps for use by internal teams and external organizations like the Mental Health & Recovery Board of Kent.</p>
+
+  <h4>📌 Featured StoryMap Contributions</h4>
 
   <div class="project">
-    <img src="images/story_map_fresh_food_map.PNG" alt="Access to Nutritious Foods Map">
-    <p class="caption"><strong>Access to Nutritious Foods:</strong> This map visualizes areas within the county with limited access to nutritious food vendors (WIC, grocery, farm markets). Data from state WIC registries and vendor licensing databases was joined with public transit layers and zip-code demographic data to assess need and risk areas. This project informed strategy for equitable food outreach.</p>
-    <div class="tools">Tools: ArcGIS Pro, ArcGIS Online, WIC Vendor Data, Census Tracts</div>
+    <a href="images/story_map_fresh_food_map.PNG" target="_blank">
+      <img src="images/story_map_fresh_food_map.PNG" alt="Access to Nutritious Foods Map">
+    </a>
+    <p class="caption"><strong>Access to Nutritious Foods — Chronic Disease Connection:</strong> This map displays areas within Portage County with varying levels of access to nutritious food retailers such as grocery stores, farmers markets, and WIC-participating vendors. Limited food access is linked to higher rates of chronic illness. I processed vendor classification data, integrated local store lists and WIC registries, performed zip-code joins with health indicator datasets, and created this map in ArcGIS Online as part of a broader community health initiative.</p>
+    <div class="tools">Tools: ArcGIS Online, ArcGIS Pro, Ohio WIC Database, Census Tract Demographics</div>
   </div>
 
   <div class="project">
-    <img src="images/drive time map.PNG" alt="Drive Time to WIC Retailers Map">
-    <p class="caption"><strong>Drive Time to WIC Retailers:</strong> I used ArcGIS Network Analyst to model real drive-time distances from population centers to WIC-approved vendors. The analysis identified areas with poor accessibility (10–15 min drive) and guided discussion about WIC expansion and service prioritization in rural zones.</p>
-    <div class="tools">Tools: ArcGIS Network Analyst, ODNR Roads Layer, Spatial Join</div>
+    <a href="images/drive time map.PNG" target="_blank">
+      <img src="images/drive time map.PNG" alt="Drive Time to WIC Retailers Map">
+    </a>
+    <p class="caption"><strong>Drive Time to WIC Retailers:</strong> I created this drive-time isochrone analysis to identify rural or underserved communities with limited access to WIC resources. This required using the ArcGIS Network Analyst extension, building a road network dataset from ODNR shapefiles, and generating multi-ring buffers to model drive time. This map informed future placement of food vendors and provided public-facing insights on local food deserts.</p>
+    <div class="tools">Tools: ArcGIS Pro Network Analyst, ODNR Roads Layer, WIC Vendor Data</div>
   </div>
 
   <div class="project">
-    <img src="images/story_map_physical_health_indicators.PNG" alt="Census Block Clustering Map">
-    <p class="caption"><strong>Census Block Clustering for Vulnerable Populations:</strong> I applied k-means clustering in R to group census blocks with overlapping indicators of socioeconomic risk — including high rent burden, low diploma attainment, lack of vehicle access, and single-parent households. This analysis was integrated into the county’s vulnerability assessments to drive health equity planning.</p>
-    <div class="tools">Tools: RStudio, K-means Clustering, ACS Census Data, ArcGIS Pro</div>
+    <a href="images/story_map_physical_health_indicators.PNG" target="_blank">
+      <img src="images/story_map_physical_health_indicators.PNG" alt="Census Block Clustering Map">
+    </a>
+    <p class="caption"><strong>Census Block Clustering for Vulnerable Populations:</strong> I performed a full demographic segmentation of Portage County using K-means clustering on census data. Variables included poverty, vehicle access, rent burden, education, and household composition. After building and evaluating clusters in RStudio, I mapped the results in ArcGIS to help public health teams identify and prioritize vulnerable communities for outreach, mobile services, and grant funding initiatives.</p>
+    <div class="tools">Tools: RStudio (K-means), ArcGIS Pro, U.S. Census Data, Python</div>
   </div>
 
-  <p class="caption">
-    These projects represent only a portion of the spatial tools and visualizations I developed during my time at PCHD. Additional maps and dashboards — including those for COVID-19 surveillance, mosquito-borne disease tracking, and internal communicable disease reporting — can be explored below.
-  </p>
-
+  <p class="caption">For additional visualizations and StoryMap sections — including chronic disease and access to care analyses — explore the full presentation below:</p>
   <a class="academic-button" href="https://storymaps.arcgis.com/stories/5ba1d23a42c8455991568e3f966b7e7d" target="_blank">View Full StoryMap</a>
 
-  <h4 style="margin-top: 40px;">Selected Surveillance Dashboards</h4>
-  <div style="margin-bottom: 15px;">
-    <a class="academic-button" href="https://pccghd.maps.arcgis.com/apps/dashboards/3373a3fbbdc54befb2c66da0722e2c86" target="_blank">Mosquito Surveillance Dashboard</a>
-  </div>
-  <div>
-    <a class="academic-button" href="https://pccghd.maps.arcgis.com/apps/dashboards/d26de50eb036453eb37622b07dd58c36" target="_blank">COVID-19 Case Dashboard</a>
+  <h4>🧪 Interactive Dashboards</h4>
+  <div class="project">
+    <a href="images/mosquito_dash.PNG" target="_blank">
+      <img src="images/mosquito_dash.PNG" alt="Mosquito Surveillance Dashboard Screenshot">
+    </a>
+    <p class="caption"><strong>Mosquito Surveillance Dashboard:</strong> I cleaned, processed, and visualized field surveillance data on mosquitoes trapped and tested for West Nile Virus across Portage County. This included trap location geocoding, WNV test results, monthly activity levels, and cumulative trends since 2018. I created charts in R, imported data into ArcGIS Online, and configured map-based visual interactivity. I was solely responsible for maintaining and updating this dashboard.</p>
+    <a class="academic-button" href="https://pccghd.maps.arcgis.com/apps/dashboards/3373a3fbbdc54befb2c66da0722e2c86" target="_blank">Open Mosquito Dashboard</a>
   </div>
 
-  <h4 style="margin-top: 40px;">Communicable Disease Mapping Snapshots</h4>
+  <div class="project">
+    <a href="images/Covid_dash_march31.PNG" target="_blank">
+      <img src="images/Covid_dash_march31.PNG" alt="COVID-19 Dashboard Screenshot">
+    </a>
+    <p class="caption"><strong>COVID-19 Case & Hospitalization Dashboard:</strong> I maintained and updated the PCHD’s COVID-19 dashboard weekly using ArcGIS Online and Excel. I cleaned and de-identified case data, processed ZIP-code joins, created new symbology each month, monitored map interactivity, and published updates for stakeholders. The dashboard included demographic case breakdowns, ICU admissions, long-term care cases, and hospitalization counts across time.</p>
+    <a class="academic-button" href="https://pccghd.maps.arcgis.com/apps/dashboards/d26de50eb036453eb37622b07dd58c36" target="_blank">Open COVID-19 Dashboard</a>
+  </div>
+
+  <h4>🗺️ Communicable Disease Mapping (Report Extracts)</h4>
+  <p>As part of my work on the 2024 Communicable Disease Report, I produced choropleth maps showing case distribution by ZIP code across Portage County. I wrangled case data from internal health records, joined datasets with ZIP-code polygons, classified results by case count thresholds, and standardized symbology across disease categories. These visuals were used internally and shared with health boards and grant writers.</p>
+
   <div class="image-grid">
     <div class="thumb">
-      <img src="images/Communicable_disease_report_2024_all_diseases.PNG" alt="All Communicable Disease Cases">
-      <p class="thumb-label">All Reportable Disease Rates by Zip Code</p>
+      <a href="images/Communicable_disease_report_2024_all_diseases.PNG" target="_blank">
+        <img src="images/Communicable_disease_report_2024_all_diseases.PNG" alt="All Diseases Map">
+      </a>
+      <p class="thumb-label">All Communicable Disease Cases — Countywide Total Case Burden</p>
     </div>
     <div class="thumb">
-      <img src="images/Communicable_disease_report_2024_Chlamydia.PNG" alt="Chlamydia Rate Map">
-      <p class="thumb-label">Chlamydia Infection Rates (2024)</p>
+      <a href="images/Communicable_disease_report_2024_Chlamydia.PNG" target="_blank">
+        <img src="images/Communicable_disease_report_2024_Chlamydia.PNG" alt="Chlamydia Map">
+      </a>
+      <p class="thumb-label">Rate of Chlamydia Cases by ZIP Code</p>
     </div>
     <div class="thumb">
-      <img src="images/Communicable_disease_report_2024_influenza.PNG" alt="Influenza Hospitalizations Map">
-      <p class="thumb-label">Influenza Hospitalization Rates</p>
+      <a href="images/Communicable_disease_report_2024_gonococcal.PNG" target="_blank">
+        <img src="images/Communicable_disease_report_2024_gonococcal.PNG" alt="Gonorrhea Map">
+      </a>
+      <p class="thumb-label">Rate of Gonococcal Infections by ZIP Code</p>
     </div>
     <div class="thumb">
-      <img src="images/Communicable_disease_report_2024_gonococcal.PNG" alt="Gonorrhea Rate Map">
-      <p class="thumb-label">Gonococcal Infection Rates</p>
+      <a href="images/Communicable_disease_report_2024_influenza.PNG" target="_blank">
+        <img src="images/Communicable_disease_report_2024_influenza.PNG" alt="Influenza Hospitalizations Map">
+      </a>
+      <p class="thumb-label">Influenza Hospitalizations by ZIP Code</p>
     </div>
   </div>
-  <div class="tools">Tools: ArcGIS Pro, Ohio Disease Reporting System (ODRS), Health District Case Logs</div>
-</div>
 
+</div>
         
       <div class="project">
         <h3>Climate Modeling & Tornado Risk Analysis</h3>
