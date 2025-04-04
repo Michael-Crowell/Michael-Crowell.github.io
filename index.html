@@ -334,44 +334,36 @@
   </div>
 
 
-        <div class="project">
-  <h3>GIS & Community Health StoryMap Showcase</h3>
-  
-  <!-- Nutritious Foods Map -->
-  <h4>Chronic Disease – Access to Nutritious Foods</h4>
-  <img src="images/storymap_fresh_food_map.PNG" alt="Access to Nutritious Foods Map" style="max-width:100%; border: 1px solid #415b76; box-shadow: 0 2px 4px rgba(0,0,0,0.4); margin-top: 10px;">
-  <p class="caption">
-    This map highlights ZIP codes in Portage County where residents have limited access to nutritious foods. It played a key role in guiding the 2023–2025 Community Health Improvement Plan. The visualization identifies food deserts by mapping the percentage of the population with constrained access to full-service grocery stores and WIC-approved retailers.
-  </p>
-  <p class="caption">
-    I performed data integration and analysis using ArcGIS Pro and Online, merging census demographics with food access data. Spatial joins and classification techniques were used to generate choropleth layers reflecting food security vulnerability. The analysis enabled data-driven decision making across health equity efforts.
-  </p>
-  <a href="https://storymaps.arcgis.com/stories/5ba1d23a42c8455991568e3f966b7e7d" target="_blank" style="display:inline-block; padding:10px 20px; background-color:#274e78; color:white; text-decoration:none; border-radius:4px;">View Full StoryMap</a>
+      <section class="project">
+  <h3>Community Health Data Mapping: StoryMap Highlights</h3>
 
-  <!-- Drive Time Map -->
-  <h4 style="margin-top:40px;">Drive Time to WIC Retailers</h4>
-  <img src="images/drive_time_map.PNG" alt="Drive Time Map" style="max-width:100%; border: 1px solid #415b76; box-shadow: 0 2px 4px rgba(0,0,0,0.4); margin-top: 10px;">
-  <p class="caption">
-    This drive time analysis identifies how long it takes residents across Portage County to reach a WIC retailer by vehicle. Areas with longer travel times were flagged for potential public health intervention, mobile food services, or expanded transit routes.
-  </p>
-  <p class="caption">
-    Using ArcGIS Network Analyst, I modeled drive-time catchments based on road infrastructure and public retail locations. The result is a layered accessibility map that helped the Health District prioritize underserved areas and strengthen resource planning.
-  </p>
+  <div class="project">
+    <img src="images/story_map_fresh_food_map.PNG" alt="Access to Nutritious Foods Map">
+    <p class="caption"><strong>Access to Nutritious Foods — Chronic Disease Connection:</strong> This map displays areas within Portage County with varying levels of access to nutritious food retailers such as grocery stores, farmers markets, and WIC-participating vendors. Limited food access is linked to higher rates of chronic illness. I used vendor classification data, county health metrics, and WIC store registries to identify nutritious food deserts. This map helped public health officials locate underserved areas and design outreach programs.</p>
+    <div class="tools">Tools: ArcGIS Online, ArcGIS Pro, Ohio WIC Database, Census Tract Demographics</div>
+    <a href="https://storymaps.arcgis.com/stories/5ba1d23a42c8455991568e3f966b7e7d" target="_blank">
+      <button class="carousel-button">View Full StoryMap</button>
+    </a>
+  </div>
 
-  <!-- Census Block Cluster Map -->
-  <h4 style="margin-top:40px;">Census Block Clustering for Vulnerable Populations</h4>
-  <img src="images/story_map_intro_map.PNG" alt="Census Block Cluster Map" style="max-width:100%; border: 1px solid #415b76; box-shadow: 0 2px 4px rgba(0,0,0,0.4); margin-top: 10px;">
-  <p class="caption">
-    This multivariate map visualizes vulnerable community clusters based on social and economic indicators including vehicle access, education levels, single-parent households, and insurance coverage.
-  </p>
-  <p class="caption">
-    I conducted cluster analysis and variable normalization using a combination of Excel and ArcGIS. Block groups were categorized into one of four vulnerability types based on standardized scores. The resulting clusters were essential for targeting outreach, identifying gaps in care, and presenting findings to stakeholders and city councils.
-  </p>
+  <div class="project">
+    <img src="images/drive time map.PNG" alt="Drive Time to WIC Retailers Map">
+    <p class="caption"><strong>Drive Time to WIC Retailers:</strong> This analysis models drive-time accessibility from residential areas to WIC-participating retailers, highlighting inequities in access to essential nutrition services. It required road network data, spatial buffering, and isochrone modeling. These findings support strategic placement of new vendors and outreach efforts for underserved areas.</p>
+    <div class="tools">Tools: ArcGIS Pro Network Analyst, ODNR Roads Layer, WIC Vendor Data</div>
+    <a href="https://storymaps.arcgis.com/stories/5ba1d23a42c8455991568e3f966b7e7d" target="_blank">
+      <button class="carousel-button">View Full StoryMap</button>
+    </a>
+  </div>
 
-  <a href="https://storymaps.arcgis.com/stories/5ba1d23a42c8455991568e3f966b7e7d" target="_blank" style="display:inline-block; padding:10px 20px; margin-top:10px; background-color:#274e78; color:white; text-decoration:none; border-radius:4px;">Explore Full StoryMap</a>
-</div>
-
-        
+  <div class="project">
+    <img src="images/story_map_physical_health_indicators.PNG" alt="Census Block Clustering Map">
+    <p class="caption"><strong>Census Block Clustering for Vulnerable Populations:</strong> Using K-means clustering and census data, this map segments Portage County into statistically defined clusters of vulnerability. Factors include poverty rate, education level, age distribution, and housing stability. The goal was to target public health interventions where they are most needed, based on a holistic demographic risk profile.</p>
+    <div class="tools">Tools: RStudio (K-means), ArcGIS Pro, U.S. Census Data, Python</div>
+    <a href="https://storymaps.arcgis.com/stories/5ba1d23a42c8455991568e3f966b7e7d" target="_blank">
+      <button class="carousel-button">View Full StoryMap</button>
+    </a>
+  </div>
+</section>
      
       <div class="project">
         <h3>Climate Modeling & Tornado Risk Analysis</h3>
