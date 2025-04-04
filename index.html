@@ -240,7 +240,55 @@
   background: linear-gradient(90deg, #466b91, #2e4a6f);
   transform: translateY(-2px);
 }
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
 
+.dropbtn {
+  color: #a5c8ff;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  padding: 6px 12px;
+  text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #172437;
+  min-width: 220px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: #a5c8ff;
+  padding: 10px 16px;
+  text-decoration: none;
+  display: block;
+  transition: background 0.3s;
+}
+
+.dropdown-content a:hover {
+  background-color: #274e78;
+  color: #ffffff;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  color: #ffffff;
+  background: #274e78;
+  border-radius: 4px;
+}
+
+    
 </style>
 </head>
 <body>
@@ -251,7 +299,15 @@
 
   <nav>
     <a href="#about">About</a>
-    <a href="#portfolio">Projects</a>
+   <div class="dropdown">
+  <a href="#portfolio" class="dropbtn">Projects</a>
+  <div class="dropdown-content">
+    <a href="#storymap">StoryMap Highlights</a>
+    <a href="#dashboards">Dashboards</a>
+    <a href="#disease-maps">Communicable Disease Maps</a>
+  </div>
+</div>
+
     <a href="#resume">Resume</a>
     <a href="#contact">Contact</a>
   </nav>
@@ -327,7 +383,7 @@
   <p>I routinely used <strong>ArcGIS Pro</strong>, <strong>ArcGIS Online</strong>, <strong>RStudio</strong>, <strong>Python</strong>, and <strong>Excel</strong> to manage and analyze complex datasets — including bootstrapping, sampling, modeling, and automating weekly updates. I worked with diverse data sources, including the U.S. Census, Ohio EPA, ODNR, local water system data, CDC, and state health records. My contributions included cleaning, transforming, de-identifying, and visualizing datasets into accessible dashboards and maps for use by internal teams and external organizations like the Mental Health & Recovery Board of Kent.</p>
 
   <h4> Featured StoryMap Contributions</h4>
-
+<section id="storymap"> ... </section>
   <div class="project">
     <a href="images/story_map_fresh_food_map.PNG" target="_blank">
       <img src="images/story_map_fresh_food_map.PNG" alt="Access to Nutritious Foods Map">
@@ -356,6 +412,7 @@
   <a class="academic-button" href="https://storymaps.arcgis.com/stories/5ba1d23a42c8455991568e3f966b7e7d" target="_blank">View Full StoryMap</a>
 
   <h4>Interactive Dashboards</h4>
+    <section id="dashboards"> ... </section>
   <div class="project">
     <a href="images/mosquito_dash.PNG" target="_blank">
       <img src="images/mosquito_dash.PNG" alt="Mosquito Surveillance Dashboard Screenshot">
@@ -373,6 +430,7 @@
   </div>
 
   <h4>Communicable Disease Mapping (Report Extracts)</h4>
+    <section id="disease-maps"> ... </section>
   <p>As part of my work on the 2024 Communicable Disease Report, I produced choropleth maps showing case distribution by ZIP code across Portage County. I wrangled case data from internal health records, joined datasets with ZIP-code polygons, classified results by case count thresholds, and standardized symbology across disease categories. These visuals were used internally and shared with health boards and grant writers, while being fully accessible to the public and various community stakeholders.</p>
 
   <div class="image-grid">
